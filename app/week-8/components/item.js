@@ -1,0 +1,12 @@
+
+const Item = ({name, quantity, category, onSelect}) => { 
+    return ( 
+            <li onClick={() => onSelect(name)} className="border bg-purple-500 rounded-lg p-4">
+                <p className="mb-1">{name}</p>
+                <p className="mb-1">Quantity: {quantity}</p>
+                <p className="mb-1">Category: {category}</p>
+            </li>
+    )
+}
+
+export default Item
