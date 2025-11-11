@@ -1,4 +1,3 @@
-"use client";
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -16,6 +15,10 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
  
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
+// Initialize Firebase --  deployment error fix
+const app = typeof window !== "undefined"
+  ? (!getApps().length ? initializeApp(firebaseConfig) : getApp())
+  : null;
+
+
+export const auth = app ? getAuth(app) : null;
