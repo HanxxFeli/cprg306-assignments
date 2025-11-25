@@ -13,6 +13,7 @@ export default function Page() {
         <li><Link href="/week-7">Go to the Week 7 page</Link></li>
         <li><Link href="/week-8">Go to the Week 8 page</Link></li>
         <li><Link href="/week-9">Go to the Week 9 page</Link></li>
+        <li><Link href="/week-10">Go to the Week 10 page</Link></li>
       </ul>
     </main>
   );

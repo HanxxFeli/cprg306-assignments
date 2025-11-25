@@ -3,6 +3,8 @@ import { initializeApp, getApps, getApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 import { getAuth } from "firebase/auth";
+
+import { getFirestore } from "firebase/firestore"; // week 10 additonal import
  
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -21,3 +23,4 @@ const app = typeof window !== "undefined"
 
 
 export const auth = app ? getAuth(app) : null;
+export const db = app ? getFirestore(app): null;
